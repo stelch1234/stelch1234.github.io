@@ -1,12 +1,12 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: '마케팅 전공자의 블로그'  
+description: '마케팅 전공자가 데이터 분석가의 길을 향해 경험과 지식을 쌓고 있습니다.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''
 url: 'https://stelch1234.github.io/'
 disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+email: 'stelch@naver.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
@@ -20,21 +20,13 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
-      name:           Sal
+    Stella:
+      name:           Stella
       site:           https://www.wowthemes.net
       avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
-
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      bio:            "Hi, I am Stella, the author of blog. I hope you like it!"
+      email:          stelch@naver.com
+      github:         https://github.com/stelch1234
  
 # Defaults
 defaults:
@@ -44,7 +36,6 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
       avatar: /assets/images/avatar1.jpg
       
   # all pages
@@ -53,6 +44,20 @@ defaults:
     values:
       layout: page
       
+# Analytics
+analytics:
+  provider               : false # 구글 어날리틱스 등록 false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          :
+    anonymize_ip         : # true, false (default)
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/stelch1234"
+
 # Syntax
 markdown: kramdown
 highlighter: rouge
