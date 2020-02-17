@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: DataScience_Project
+title: Project
 permalink: /proejct/
 tagline: "Humanity is overrated."
 category: "project"

@@ -17,6 +17,34 @@ paginate: 5
 theme-dark: false #Set to true to change to dark website theme
 
 plugins: [jekyll-paginate, kramdown]
+
+disqus: True
 disqus_shortname: 'stelch1234'
 # Build settings
 markdown: kramdown
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
+  - node_modules
