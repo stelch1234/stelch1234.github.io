@@ -5,6 +5,7 @@ categories: python
 author: 'Stella'
 tags: [Python, 스케일링]
 #image: assets/images/1.jpg
+comments: true
 ---
 
 

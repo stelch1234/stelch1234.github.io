@@ -15,7 +15,7 @@ url: "https://stelch1234.github.io/" # the base hostname & protocol for your sit
 github_username: stelch1234
 paginate: 5
 theme-dark: false #Set to true to change to dark website theme
-disqus_shortname: stelch1234
+discus-identifier: stelch1234
     
 # Build settings
 markdown: kramdown
