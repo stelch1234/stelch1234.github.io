@@ -15,13 +15,7 @@ url: "https://stelch1234.github.io/" # the base hostname & protocol for your sit
 github_username: stelch1234
 paginate: 5
 theme-dark: false #Set to true to change to dark website theme
-
-plugins: [jekyll-paginate, kramdown]
-
-comments:
-  provider: disqus
-  disqus:
-    shortname: stelch1234
+disqus_shortname: stelch1234
     
 # Build settings
 markdown: kramdown
