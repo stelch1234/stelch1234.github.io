@@ -2,7 +2,7 @@
 layout: post
 title: "[파이썬] 데이터 스케일링 (Data Scaling)"
 author: Stella
-categories: [Python]
+permalink: '/Python/Basic'
 tags: [Python, 스케일링]
 image: assets/images/1.jpg
 ---
