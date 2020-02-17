@@ -40,14 +40,3 @@ defaults:
       share: true
       related: true
 
-
-exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - "*.Rmd"
-  - vendor
-  - .travis.yml
-  - node_modules
