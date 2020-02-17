@@ -1,79 +1,21 @@
-# Site
-name: 'Marketing&IT Blog'  
-description: '마케팅 전공자가 데이터 분석가의 길을 향해 경험과 지식을 쌓고 있습니다.'
-logo: 'assets/images/2.jpg'
-favicon: 'assets/images/1.ico'
-baseurl: ''
-url: 'https://stelch1234.github.io/'
-disqus: 'demowebsite'
-email: 'stelch@naver.com'
-#mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
-include: ["_pages"]
-permalink: /:title/
-cover: 'assets/images/1.jpg'
-production_url: 'https://stelch1234.github.io/'
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# The font used for headings. Expects a string that is a valid CSS font-family value.
-font_heading:        "'Roboto Slab', 'Nanum Gothic', Helvetica, Arial, sans-serif"
-
-# The text font. Expects a string that is a valid CSS font-family value.
-font:                "'Noto Sans', 'Nanum Gothic', Helvetica, Arial, sans-serif"
-
-# The string encoding what fonts to fetch from Google Fonts.
-# See: https://qwtel.com/hydejack/docs/configuration/
-google_fonts:        Roboto+Slab:700|Noto+Sans:400,400i,700,700i
-
-# If you do not use a Google Fonts, uncomment the line below
-# no_google_fonts:     true
-
-# Plugins
-plugins: 
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-seo-tag
-  
-authors:
-    Stella:
-      name:           Stella
-      #site:           https://www.wowthemes.net
-      avatar:         /assets/images/2.jpg
-      bio:            "Hi, I am Stella, the author of blog. I hope you like it!"
-      email:          stelch@naver.com
-      github:         https://github.com/stelch1234
- 
-# Defaults
-defaults:
-
-  # all posts
-  - scope:
-      path: "_posts"
-    values:
-      layout: post
-      avatar: /assets/images/2.jpg
-      
-  # all pages
-  - scope:
-      path: "_pages"
-    values:
-      layout: page
-      
-# Analytics
-analytics:
-  provider               : false # 구글 어날리틱스 등록 false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
-
-
-# Syntax
-markdown: kramdown
-highlighter: rouge
-
-# Paginate
+# Site settings
+title: Marketing&IT Blog
+email: stelch@naver.com
+description: 마케팅 전공자의 데이터 분석 경험
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://stelch1234.github.io" # the base hostname & protocol for your site
+#twitter_username: hemang_kumar
+github_username:  stelch1234
 paginate: 5
+theme-dark: false #Set to true to change to dark website theme
 
-
-
-# Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+plugins: [jekyll-paginate, kramdown]
+# Build settings
+markdown: kramdown
