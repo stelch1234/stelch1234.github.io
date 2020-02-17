@@ -2,7 +2,7 @@
 name: 'Marketing&IT Blog'  
 description: '마케팅 전공자가 데이터 분석가의 길을 향해 경험과 지식을 쌓고 있습니다.'
 logo: 'assets/images/2.jpg'
-#favicon: 'assets/images/favicon.ico'
+favicon: 'assets/images/1.ico'
 baseurl: ''
 url: 'https://stelch1234.github.io/'
 disqus: 'demowebsite'
@@ -10,7 +10,8 @@ email: 'stelch@naver.com'
 #mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
 permalink: /:title/
-
+cover: 'assets/images/1.jpg'
+production_url: 'https://stelch1234.github.io/'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:        "'Roboto Slab', 'Nanum Gothic', Helvetica, Arial, sans-serif"
@@ -76,7 +77,7 @@ markdown: kramdown
 highlighter: rouge
 
 # Paginate
-paginate: 10
+paginate: 5
 
 
 
