@@ -19,7 +19,7 @@ theme-dark: false #Set to true to change to dark website theme
 plugins: [jekyll-paginate, kramdown]
 
 disqus: True
-disqus_shortname: 'stelch1234'
+disqus_shortname: stelch1234
 # Build settings
 markdown: kramdown
 
