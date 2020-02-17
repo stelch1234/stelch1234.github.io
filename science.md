@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: Python
-permalink: /python/
+title: DataScience_Project
+permalink: /proejct/
 tagline: "Humanity is overrated."
-category: "python"
+category: "project"
 ---

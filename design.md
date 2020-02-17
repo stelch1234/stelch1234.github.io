@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: Design
-permalink: /design/
-category: "design"
+title: python
+permalink: /python/
+category: "python"
 tagline: "it's all about perception."
 ---
