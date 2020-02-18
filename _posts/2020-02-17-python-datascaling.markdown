@@ -18,8 +18,10 @@ comments: true
 <br/>
 <br/>
 
+# 스케일링 (Scaling) 종류
 
-# 스케일링 (Scaling) 종류  
+------
+
 <br/>
 
 ## StandardScaler 
@@ -33,7 +35,7 @@ X_train  = scaler.fit_transform(X_train)
 #fit는 데이터 변환을 학습,
 #transform은 실제 데이터 스케일 조정,
 #fit과 transform을 동시에 진행하는게 fit_transform().
-```  
+```
 <br/>
 
 ## RobustScaler 
@@ -55,7 +57,7 @@ X_train  = scaler.fit_transform(X_train)
 from sklearn.preprocessing import StandardScaler
 scaler = MinMaxScaler()
 X_train  = scaler.fit_transform(X_train)
-```  
+```
 <br/>
 
 ## Normalizer
