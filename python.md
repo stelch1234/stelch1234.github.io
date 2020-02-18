@@ -3,5 +3,5 @@ layout: archive
 title: python
 permalink: /python/
 category: "python"
-tagline: "Algorithm & ML & DL"
+tagline: "Algorithm & Machine Learning & Deep Learning"
 ---

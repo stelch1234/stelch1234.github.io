@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[파이썬] 데이터 스케일링 (Data Scaling)"
+title: "데이터 스케일링 (Data Scaling)"
 categories: python
 author: 'Stella'
 tags: [Python, 스케일링]
