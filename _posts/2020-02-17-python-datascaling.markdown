@@ -14,13 +14,13 @@ comments: true
 
 이러한 이유로 모델링을 진행하기 전에 데이터 스케일링(Scaling) 을 해주는 과정이 필요하며 대부분의 스케일링들은 이상치(outlier)에 민감하기 때문에 이상치 처리가 필수적으로 해야한다.특히 데이터 스케일링은 k-means 와 같은 거리 기반의 모델에서 중요하게 된다. 
 
-스케일링의 또 다른 장점은 , 스케일링을 해주면 다차원의 값들을 비교 분석하기 쉽게 되고 오버플로우(overflow)와 언더플로우(underflow)를 방지있다. 
+스케일링의 또 다른 장점은 , 스케일링을 해주면 다차원의 값들을 비교 분석하기 쉽게 되고 오버플로우(overflow)와 언더플로우(underflow)를 방지있다.  
+<br/>
+<br/>
 
 
-
-# 스케일링 (Scaling) 종류 
-
-
+# 스케일링 (Scaling) 종류  
+<br/>
 
 ## StandardScaler 
 
@@ -33,9 +33,8 @@ X_train  = scaler.fit_transform(X_train)
 #fit는 데이터 변환을 학습,
 #transform은 실제 데이터 스케일 조정,
 #fit과 transform을 동시에 진행하는게 fit_transform().
-```
-
-
+```  
+<br/>
 
 ## RobustScaler 
 
@@ -46,8 +45,7 @@ from sklearn.preprocessing import StandardScaler
 scaler = RobustSacler()
 X_train  = scaler.fit_transform(X_train)
 ```
-
-
+<br/>
 
 ## MinmaxScaler
 
@@ -57,9 +55,8 @@ X_train  = scaler.fit_transform(X_train)
 from sklearn.preprocessing import StandardScaler
 scaler = MinMaxScaler()
 X_train  = scaler.fit_transform(X_train)
-```
-
-
+```  
+<br/>
 
 ## Normalizer
 
