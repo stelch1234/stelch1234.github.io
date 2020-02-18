@@ -2,8 +2,8 @@
 layout: archive
 title: Contact
 permalink: /contact
-tagline: "언제든지 문의사항이 있으면 연락주세요."
 category: "contact"
+tagline: "언제든지 문의사항이 있으면 연락주세요."
 ---
 
 <form action="https://formspree.io/{{site.email}}" method="POST">    
