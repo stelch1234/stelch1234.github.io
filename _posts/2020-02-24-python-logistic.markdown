@@ -1,5 +1,5 @@
 ---
-ㄹlayout: post
+layout: post
 title: "로지스틱회귀(logistic regression)"
 categories: python
 author: 'Stella'
