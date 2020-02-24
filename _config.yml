@@ -16,7 +16,8 @@ github_username: stelch1234
 paginate: 5
 theme-dark: false #Set to true to change to dark website theme
 discus-identifier: stelch1234
-    
+
+google_analytics_id: UA-158965523-1    
 # Build settings
 markdown: kramdown
 
