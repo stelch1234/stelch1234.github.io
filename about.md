@@ -1,7 +1,7 @@
 ---
 layout: page
-title : About
-permalink: /about/
+title : ABOUT
+permalink: /about
 ---
 
 <h2>Stella</h2>
