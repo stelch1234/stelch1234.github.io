@@ -12,8 +12,7 @@
     {% for sitePage in site.pages %}
     {% if sitePage.title %}
 
-    <span class="exclamationMark">/</span><a class="page-link" href="{{sitePage.url}}">{{sitePage.title}}</a>
-    {% endif %}
+     <span class="exclamationMark">/</span><a class="page-link" href="{{sitePage.url | prepend: site.baseurl }}">{{sitePage.title}}</a>
     {% endif %}
     {% endfor %}
   </div>
