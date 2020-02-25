@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: PYTHON
-permalink: python
+permalink: /python
 category: "python"
 tagline: "Algorithm & Machine Learning & Deep Learning"
 ---
