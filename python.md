@@ -3,5 +3,5 @@ layout: archive
 title: PYTHON
 permalink: /python
 category: "python"
-tagline: "Algorithm & Machine Learning & Deep Learning"
+tagline: "데이터 분석에 관한 이론"
 ---

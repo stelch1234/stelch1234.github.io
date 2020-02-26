@@ -14,10 +14,10 @@ layout: default
     </div>
     <br>
     <div class="postTitle">
-    <a class='postLink' href="{{site.baseurl}}{{site.url}}{{post.url}}">{{post.title}}</a>
+    <a class='postLink' href="{{site.baseurl | replace: '//', '/'}}{{site.url}}{{post.url}}">{{post.title}}</a>
     </div>
     <div class="postExt">
-   {{ post.content | strip_html | truncate:10}}
+   {{ post.content | strip_html}}
     </div>
   </div>
 
