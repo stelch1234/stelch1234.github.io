@@ -1,4 +1,7 @@
 # Site settings
+
+remote_theme : bogoli/-folio
+
 title: Marketing&IT Blog
 email: stelch@naver.com
 description: > # this means to ignore newlines until "baseurl:"
