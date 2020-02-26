@@ -1,6 +1,6 @@
 ---
 layout: page
-title : ABOUT
+title: about
 permalink: /about/
 ---
 
@@ -9,4 +9,6 @@ permalink: /about/
 <br>
 <center><p ><strong><span class="manual">Marketing&IT Blog by</span> Stella</strong></p></center>
 <br>
+
+
 

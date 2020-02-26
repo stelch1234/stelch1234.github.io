@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "데이터 스케일링 (Data Scaling)"
-categories: python
-author: 'Stella'
+title: 데이터 스케일링 (Data Scaling)
 tags: [Python, 스케일링]
-#image: assets/images/1.jpg
+description: 데이터 스케일링 방법
 comments: true
 ---
 

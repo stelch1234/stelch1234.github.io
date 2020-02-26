@@ -1,182 +1,51 @@
-<p align = "center">
-<img src="http://i.imgur.com/JhbQ03z.png"/>
-</p>
+# *folio
+A simple theme for showcasing your work, emphasis on whitespace, transparency, and helvetica. 
 
----
 
-If there's any issue you are facing in setting up this theme I'm there for you. Just create an issue in this repository (<http://github.com/hemangsk/Gravity>), (<https://help.github.com/articles/creating-an-issue/>) and I'll get back to you asap.
+<a href="http://liabogoev.com/-folio">Live Demo</a>
 
-![Welcome to Gravity](https://user-images.githubusercontent.com/13018570/27043040-778d80cc-4fb6-11e7-8619-de4be626be67.png)
-<img src="http://i.imgur.com/cPwoX3E.png"/>
-<img src="http://i.imgur.com/3TMoBGj.png"/>
-<img src="http://i.imgur.com/Z6h3uCp.png"/>
-<img src="http://i.imgur.com/bB7IIHr.png"/>
+<hr/>
 
-***
 
-# INSTALLATION
+## Features
 
-### Dependencies
+### Collections
+This Jekyll theme implements collections to let you break up your work into categories. The example is divided into poetry and portfolio, but easily revamp this into recipes, apps, short stories, limmericks, whatever your creative work is. 
+> To do this, edit the collections in the config file, create a corresponding folder, and update the portfolio and poetry source files. 
 
-Gravity uses Jekyll and it's built-in SCSS compiler for the associated CSS, so the first thing you'll need is Jekyll itself:
+Three different layouts are included—the poetry layout, for a simple list of entries, the blog layout (index.html), for more detailed descriptive list of entries, and the portfolio layout. The portfolio layout overlays a descriptive hoverover on a background image. If no image is provided, the square is auto-filled with the chosen theme color. Thumbnail sizing is not necessary, as the grid crops images perfectly. 
 
-```bash
-$ gem install jekyll
-```
+### Portfolio Specifics
+You can easily add full pages for each of the projects in your portfolio. If you want one to link to an external website, create a file for it in _portfolio, and  fil in the YAML front matter as you would for another, but with a redirect, like so: 
 
-In case you don't have the `bundler` gem installed already, you can install it as follows:
+	---
+	layout: post
+	title: Project
+	description: a project that redirects to another website
+	img:
+	redirect: https://otherpage.com
+	--- 
 
-```bash
-$ gem install bundler
-```
+### Theming
+Six beautiful theme colors have been selected to choose from. The default is red, but quickly change it by editing the _base.scss file in line 40. The color variable are listed there, as well. 
 
-For pagination, Gravity uses the [jekyll-paginate](https://jekyllrb.com/docs/pagination/) gem :
+### Photos
+Photo formatting is made simple using rows of a 3-column system. Make photos 1/3, 2/3, or full width. Easily create beautiful grids within your blog posts and projects pages. 
 
-```bash
-$ gem install jekyll-paginate
-```
+### Code Highlighting
+This theme implements Jekyll's built in code syntax highlighting with Pygments. Just use a liquid tag to delineate your code: 
+{% highlight python %}
+	code code code
+{% endhighlight %}
 
-***
 
-# USAGE
+<hr/>
+The MIT License (MIT)
+Copyright (c) 2015 Lia Bogoev
 
-Once you have the required gems, you can go ahead and clone the
-[Gravity repository](https://github.com/hemangsk/Gravity) or [download](https://github.com/hemangsk/Gravity/archive/master.zip)
-a zip of the master branch.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Run :
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-```bash
-$ jekyll serve
-```
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Jekyll should now be generating your content!
-
-***
-
-# ADDING POSTS
-
-The theme by default ships with starter posts located in `_posts/`. Delete these posts and add your content to the `_posts`
-folder to see them being served up by Jekyll. [This](https://jekyllrb.com/docs/posts/) would be a good guide to getting started on writing posts using Jekyll. We've added a concise guide below:
-
-- Create a .markdown file inside `_posts` folder.
-- Name the file according to the format YY-MM-DD-[short name for your post].
-- `2016-03-30-i-love-design.markdown`
-- Write the *Front Matter* and content in the file.
-
-### FORMAT
-
-```
----
-layout: post | default | page
-title: String POST TITLE
-date: Time Stamp
-categories: String | Array of Strings CATEGORY / CATEGORIES
----
-
----
-layout: post
-title: "The One with the Blackout"
-date: 2016-03-30 19:45:31 +0530
-categories: ["life", friends]
----
-```
-
-***
-
-# CREATE PAGES
-
-- Create a .md file in the root directory.
-- Name the file with the desired page link name.
-  `about.md`
-  `design.md`
-- Write the *Front Matter* and content in the file.
-
-### FORMAT
-
-```
----
-layout: page
-title: String TITLE OF THE WEBPAGE
-permalink: / String / PERMALINK FOR THE WEBPAGE
-tagline: String OPTIONAL GRAVITY FEATURE : TAGLINE FOR THE PAGE
----
-
----
-layout: page
-title: "Science"
-permalink: /science/
-tagline: "Humanity is overrated."
----
-```
-
-***
-
-#### Introducing
-
-# ARCHIVE PAGES
-
-#### You can display a list of all the posts corresponding to a particular category on a standalone page using the `ARCHIVE` layout.
-
-- Create a .md file in the root directory.
-- Name the file. Preferred name will be the name of the category.
-    \*`life.md`
-- Write the *Front Matter* and content in the file.
-
-### FORMAT
-
-```
----
-layout: archive ARCHIVE PAGE LAYOUT
-title: String TITLE OF THE WEBPAGE
-permalink: / String / PERMALINK FOR THE WEBPAGE
-tagline: String TAGLINE FOR THE PAGE
-category: String NAME OF THE CATEGORY OF WHICH THE PAGE WILL SHOW POSTS
----
-
----
-layout: archive
-title: "Design"
-permalink: "Design"
-tagline: "It's all about perception"
-category: "design"
----
-```
-
-#### DIRECTORY STRUCTURE
-
-```
-├── css                                         # => Output of the combined SASS files
-│   └── style.scss
-├── _includes                                   # => Contains partials that can be used with your layouts
-│   ├── footer.html
-│   ├── header.html
-│   ├── head.html
-│   ├── icon-github.html
-│   ├── icon-github.svg
-│   ├── icon-twitter.html
-│   └── icon-twitter.svg
-├── _layouts                                    # => Layout related HTML files
-│   ├── archive.html
-│   ├── default.html
-│   ├── page.html
-│   └── post.html
-├── _posts                                      # => posts, dynamic content. Follow the format: YEAR-MONTH-DAY-title.MARKUP
-│   ├── 2016-03-30-design-stories.markdown
-│   ├── 2016-03-30-science0.markdown
-│   ├── 2016-03-30-science.markdown
-│   └── 2016-03-30-welcome-to-jekyll.markdown
-└── _sass                                       # => SASS partials for styling
-|   ├── _base.scss
-|   ├── _layout.scss
-|   └── _syntax-highlighting.scss
-├── about.md
-├── _config.yml                                 # => Configuration options or flags for your site go here
-├── design.md
-├── download.md
-├── feed.xml
-├── index.html
-├── LICENSE.txt                                 # => Licensing information
-├── README.md
-└── science.md
-```

@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "서포트 벡터 머신 (SVM)"
-categories: python
-author: 'Stella'
+title: 서포트 벡터 머신 (SVM)
 tags: [Python, SVM]
-#image: assets/images/1.jpg
+description: 서포트벡터머신
 comments: true
 ---
 

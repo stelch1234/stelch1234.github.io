@@ -1,38 +1,29 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: Marketing&IT Blog
 email: stelch@naver.com
-description: 마케팅 전공자의 데이터 분석 경험
-baseurl:  # the subpath of your site, e.g. /blog
-url: "https://stelch1234.github.io/" # the base hostname & protocol for your site
-#twitter_username: hemang_kumar
-github_username: stelch1234
-paginate: 5
-theme-dark: false #Set to true to change to dark website theme
-discus-identifier: stelch1234
-
+description: > # this means to ignore newlines until "baseurl:"
+  마케팅 전공자의 데이터 분석 경험
+baseurl:  # the subpath of your site, e.g. /blog/
+url: https://stelch1234.github.io/ # the base hostname & protocol for your site
+github_username:  stelch1234
 google_analytics_id: UA-158965523-1    
-
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
 
 # Build settings
 markdown: kramdown
+
+highlighter: rouge
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+  poetry:
+    output: true
+    permalink: /poetry/:path/
+
+

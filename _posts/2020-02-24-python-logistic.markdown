@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "로지스틱회귀(logistic regression)"
-categories: python
-author: 'Stella'
+title: 로지스틱회귀(logistic regression)
 tags: [Python, 로지스틱]
-#image: assets/images/1.jpg
+description: 로지스틱회귀분석
 comments: true
 ---
 
@@ -24,7 +22,6 @@ comments: true
 
 로지스틱 회귀는 0~1사이의 값을 가져야 한다. 일반적으로 우리가 알고 있는 회귀식 h(x) = wx+b 에서는 0~1사이의 값을 가지기가 어렵다. 그렇기 때문에 0~1사이의 값으로 변환하기 위해 필요한 것이 있는데, 그것이 바로 시그모이드(sigmoid)이다.
 시그모이드 함수의 수식은 다음과 같다.
-
 
 <br/>
 <center><img src="https://github.com/stelch1234/stelch1234.github.io/blob/master/_assets/images/4564462177353728.png?raw=true"></center> 
