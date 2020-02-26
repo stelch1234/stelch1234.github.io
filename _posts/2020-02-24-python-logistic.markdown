@@ -23,7 +23,7 @@ typora-root-url: ../_assets
 
 
 
-[![img](https://postfiles.pstatic.net/MjAyMDAxMTJfMTQg/MDAxNTc4ODM3OTIyOTc4.HaxpTA-7nu0hS3Gsi_RMAKoPaa9EGq_xjF0AMxb53osg.e_ia-VMAdGAw0JkOmggdPudQZ8630xnfHxf_rEU_sCkg.PNG.stelch/sigmoid.png?type=w966)](https://blog.naver.com/PostList.nhn?blogId=stelch&widgetTypeCall=true&topReferer=https%3A%2F%2Fadmin.blog.naver.com%2Fstelch%2Fstat%2Ftoday&directAccess=true#)
+<ceter><img src="https://postfiles.pstatic.net/MjAyMDAxMTJfMTQg/MDAxNTc4ODM3OTIyOTc4.HaxpTA-7nu0hS3Gsi_RMAKoPaa9EGq_xjF0AMxb53osg.e_ia-VMAdGAw0JkOmggdPudQZ8630xnfHxf_rEU_sCkg.PNG.stelch/sigmoid.png?type=w966"/></center>
 
 
 
@@ -31,15 +31,15 @@ typora-root-url: ../_assets
 
 시그모이드 함수의 수식은 다음과 같다.
 
-![4564462177353728](/images/4564462177353728.png)
+<center><img src="https://github.com/stelch1234/stelch1234.github.io/blob/master/_assets/images/4564462177353728.png" ></center>  
 
 이 함수를 통해 우리가 원하는 0~1사이의 값으로 예측할 수 있게 된다. x의 값이 증가하게 되면 1로 수렴하게 되고 x의 값이 감소하면 0으로 수렴하게 된다. 식을 자세히 설명하면, 위 식에서 e는 자연 상수를 말하고 a와 b는 다음 아래를 보면 이해할 수 있다.
 
-[![img](https://postfiles.pstatic.net/MjAyMDAxMTJfMjg4/MDAxNTc4ODM3OTU5MzAw.zRQVkZuP2WbazuJfmdQhtHACee1xpFoUEGkUiTxquDQg.w-SxIr4MZ0rC0uk2AE9T2vPBStYX_Om02rDhMTQC0lAg.PNG.stelch/sigmoid_a.png?type=w966)](https://blog.naver.com/PostList.nhn?blogId=stelch&widgetTypeCall=true&topReferer=https%3A%2F%2Fadmin.blog.naver.com%2Fstelch%2Fstat%2Ftoday&directAccess=true#)
+<ceter><img src="https://postfiles.pstatic.net/MjAyMDAxMTJfMjg4/MDAxNTc4ODM3OTU5MzAw.zRQVkZuP2WbazuJfmdQhtHACee1xpFoUEGkUiTxquDQg.w-SxIr4MZ0rC0uk2AE9T2vPBStYX_Om02rDhMTQC0lAg.PNG.stelch/sigmoid_a.png?type=w966"></ceter>
 
 빨간색은 a=0.5일때, 초록색은 a=1일때, 파란색은 a=2일 때이다. a의 값에 따라 그래프 경사가 변화되고 있는 것을 볼 수 있다. 이를 통해 여기서 a의 값은 그래프 경사도라는 걸 알 수 있다.
 
-[![img](https://postfiles.pstatic.net/MjAyMDAxMTJfMjE1/MDAxNTc4ODM3OTU5MzE2.T8fXjUK3ftHFO6JLCKvNOBs_GyWUuyOi1FFA0LRF0hAg.zpB-9CM6kNktvEsHNWo-OirBnGrnAUHRrkGTCeph6nkg.PNG.stelch/sigmoid_b.png?type=w966)](https://blog.naver.com/PostList.nhn?blogId=stelch&widgetTypeCall=true&topReferer=https%3A%2F%2Fadmin.blog.naver.com%2Fstelch%2Fstat%2Ftoday&directAccess=true#)
+<ceter><img src="https://postfiles.pstatic.net/MjAyMDAxMTJfMjE1/MDAxNTc4ODM3OTU5MzE2.T8fXjUK3ftHFO6JLCKvNOBs_GyWUuyOi1FFA0LRF0hAg.zpB-9CM6kNktvEsHNWo-OirBnGrnAUHRrkGTCeph6nkg.PNG.stelch/sigmoid_b.png?type=w966"></ceter>
 
 빨간색은 b의 값이 클때이고, 파란색은 b의 값이 작을때를 의미한다. 즉, b값에 따라 그래프가 이동하는 것을 알 수 있다. 
 
@@ -54,6 +54,7 @@ typora-root-url: ../_assets
 <br/>
 
 <ceter><img src="https://postfiles.pstatic.net/MjAyMDAxMTNfOTkg/MDAxNTc4ODQxOTM3ODg3.RbgQX8fKI7eMShMNl2PRXiYXcxFbW1FEYwztarL5sBsg.xh4is4i1vqHVjNOuqEBTyq16myJoXd_a885zBHOXhBMg.PNG.stelch/Non_convex.png?type=w966" alt="img" style="zoom:90%;" /></center>
+<br/>	
 안타깝게도, 우리가 원하는 U형의 매끈한 그래프가 만들어지기 어렵다. 왜냐하면 로지스틱 회귀식에서 본 것처럼 로지스틱 회귀식에는 자연상수인 e가 들어가 있는다. 이 자연상수로 인해서 그래프가 울퉁불퉁한 안 예쁜 그래프 모양을 지니게 된 것이다. 이 그래프 상태에서 경사하강법을 적용하게 되면 비용함수의 최소값(global minima)에 수렴하지 않고 중간에 작은 골짜기(local minima)에 수렴하게 된다.<br/>
 
 매끈한 U형 그래프를 만들어 global minima에 도달하기 위해서는 로그 함수를 활용하면 된다.
@@ -62,11 +63,13 @@ typora-root-url: ../_assets
 <center><img src="https://postfiles.pstatic.net/MjAyMDAxMTNfMjkx/MDAxNTc4ODQxOTQ3ODgy.pxnRAizWZmeUh19CBeEnUCp9St9EzyFejIBhGcgHjKMg.vg2qRUS03o4rKxxePTUHo-NvSVxKkGQF_wIcrI_GRsUg.PNG.stelch/log.png?type=w966" alt="img" style="zoom:50%;" /></center>
 
 <br/>
+
 y=0.5에 대칭하는 두개의 로그 함수를 그리면 위와 같다. 
 
 파란색은 실제 값이 1일때, 사용되는 그래프로 0에 가까울수록 오차가 커져 Cost가 커지는 것을 볼 수 있다.
 빨간색은 실제 값이 0일때 ,사용되는 그래프로 0에 가까워야 오차가 작아 Cost도 적어지는 것으로 확인될 수 있다.
 
 파란색과 빨간색의 식은 각각 -log h 와 -log(1-h)로 나타나게 된다. 실제 값이 1일 때 파란색 식 -log h를 써야 하고 실제 값이 0일 때 빨간색 식  -log(1-h)을 써야 한다. 로그함수를 이용해 우리가 원하는 최종적인 비용 함수를 다음 수식처럼 정의할 수 있게 된다. 
+
 <br/>
-[![](/Users/stella/Downloads/stelch1234.github.io/_assets/images/5961578112090112.png)]
+<center><img src="https://github.com/stelch1234/stelch1234.github.io/blob/master/_assets/images/5961578112090112.png"></center>
