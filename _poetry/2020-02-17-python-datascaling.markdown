@@ -15,6 +15,7 @@ comments: true
 <br/>
 # 스케일링 (Scaling) 종류
 ------
+<br/>
 
 # StandardScaler 
 <br/>

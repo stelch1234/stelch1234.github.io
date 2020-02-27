@@ -8,12 +8,14 @@ comments: true
 
 # 로지스틱 회귀 (Logistic Regression) 란?
 ----
+<br/>
 로지스틱 회귀(logistic regression)는 주로 특정 분류를 위해 자주 사용되는 알고리즘으로 참과 거짓, 합격과 불합격과 같이 이진분류를 할 때 사용될 수 있다.
 <br/>
 <br/>
 
 # 시그모이드 (Sigmoid)
 ----
+<br/>
 <center><img src="https://postfiles.pstatic.net/MjAyMDAxMTJfMTQg/MDAxNTc4ODM3OTIyOTc4.HaxpTA-7nu0hS3Gsi_RMAKoPaa9EGq_xjF0AMxb53osg.e_ia-VMAdGAw0JkOmggdPudQZ8630xnfHxf_rEU_sCkg.PNG.stelch/sigmoid.png?type=w966"></center>
 <br/>
 로지스틱 회귀는 0~1사이의 값을 가져야 한다. 일반적으로 우리가 알고 있는 회귀식 h(x) = wx+b 에서는 0~1사이의 값을 가지기가 어렵다. 그렇기 때문에 0~1사이의 값으로 변환하기 위해 필요한 것이 있는데, 그것이 바로 시그모이드(sigmoid)이다.
@@ -32,9 +34,10 @@ comments: true
 <br/>
 빨간색은 b의 값이 클때이고, 파란색은 b의 값이 작을때를 의미한다. 즉, b값에 따라 그래프가 이동하는 것을 알 수 있다. 
 <br/>
-
+<br/>
 # 비용함수 (Cost Function)
 ----
+<br/>
 시그모이드를 통해 우리가 원하는 0~1사이의 값을 만들었으면 이제는 이것이 실제 값과 얼마나 차이가 있는지를 알아봐야 한다. 이를 나타내기 위해서는 비용함수 (Cost Function)에 대한 정의가 필요하다. 비용함수 (Cost Function)는 예측값과 실제 값 차이의 평균을 나타내는 함수이다. 보통 비용함수 (Cost Function)를 나타내는 그래프는 매끈한  U형의 그래프이다. 이 매끈한 골짜기 모양에 경사 하강법(Gradient descent)를 사용해 Cost가 최소가 되는 지점을 찾게 된다.
 <br/>
 우리가 알고 있는 이 비용함수에 로지스틱을 적용하게 되면 우리가 원하는 U형의 그래프가 나타나게 될까? 
@@ -42,6 +45,7 @@ comments: true
 <center><img src="https://postfiles.pstatic.net/MjAyMDAxMTNfOTkg/MDAxNTc4ODQxOTM3ODg3.RbgQX8fKI7eMShMNl2PRXiYXcxFbW1FEYwztarL5sBsg.xh4is4i1vqHVjNOuqEBTyq16myJoXd_a885zBHOXhBMg.PNG.stelch/Non_convex.png?type=w966" alt="img" style="zoom:90%;"/></center>
 <br/>
 안타깝게도, 우리가 원하는 U형의 매끈한 그래프가 만들어지기 어렵다. 왜냐하면 로지스틱 회귀식에서 본 것처럼 로지스틱 회귀식에는 자연상수인 e가 들어가 있는다. 이 자연상수로 인해서 그래프가 울퉁불퉁한 안 예쁜 그래프 모양을 지니게 된 것이다. 이 그래프 상태에서 경사하강법을 적용하게 되면 비용함수의 최소값(global minima)에 수렴하지 않고 중간에 작은 골짜기(local minima)에 수렴하게 된다.
+<br/>
 <br/>
 매끈한 U형 그래프를 만들어 global minima에 도달하기 위해서는 로그 함수를 활용하면 된다.
 <br/>
@@ -55,3 +59,6 @@ y=0.5에 대칭하는 두개의 로그 함수를 그리면 위와 같다.
 파란색과 빨간색의 식은 각각 -logh 와 -log(1-h)로 나타나게 된다. 실제 값이 1일 때 파란색 식 -logh를 써야 하고 실제 값이 0일 때 빨간색 식  -log(1-h)을 써야 한다. 로그함수를 이용해 우리가 원하는 최종적인 비용 함수를 다음 수식처럼 정의할 수 있게 된다. 
 <br/>
 <center><img src="https://github.com/stelch1234/stelch1234.github.io/blob/master/img/5961578112090112.png?raw=true"/></center>
+<br/>
+<br/>
+<br/>
