@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/.Rhistory": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.Rhistory",
+		"oF": 0
+		},
 	"/_base.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -34,6 +42,16 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"/_syntax-highlighting.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_syntax-highlighting-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/_syntax-highlighting.scss": {
 		"aP": 0,
