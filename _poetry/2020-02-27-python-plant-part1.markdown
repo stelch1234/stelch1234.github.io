@@ -13,11 +13,13 @@ https://www.dacon.io/competitions/official/235573
 <br/>
 분석의 전체적인 흐름은 다음과 같이 3개의 PART로 정리할 예정이다. 
 <br/>
+<br/>
 | PART  | 내용 |
-| ----  | :------: |
-| PART1 | 1) Prepare Problem<br/>1.1) load libraries<br/> 1.2) load and explore the shape of the dataset <br/> <br/>  2) Summarize Data<br/>2.1) Descriptive statistics<br/>2.2) Visualization |
-| PART2 | 3) Prepare Data<br/>3.1) Cleaning<br/>3.2) split out train/test dataset <br/> <br/>  4) Evaluate Algorithms<br/>4.1) Algorithms                   |
-| PART3 | 5) Improve Accuracy<br/>5.1) Grid Search <br/> <br/>  6) Performance of the best algorithms<br/>6.1) check the performance<br/>6.2) futher process |
+| ----- | :-----------------: |
+| PART1 | 1) Prepare Problem<br/>1.1) load libraries<br/> 1.2) load and explore the shape of the dataset <br/><br/>  2) Summarize Data<br/>2.1) Descriptive statistics<br/>2.2) Visualization |
+| PART2 | 3) Prepare Data<br/>3.1) Cleaning<br/>3.2) split out train/test dataset <br/><br/>  4) Evaluate Algorithms<br/>4.1) Algorithms                   |
+| PART3 | 5) Improve Accuracy<br/>5.1) Grid Search <br/><br/>  6) Performance of the best algorithms <br/>6.1) check the performance<br/>6.2) futher process |
+<br/>
 <br/>
 <br/>
 # PART1: 1) Prepare Problem
@@ -102,7 +104,7 @@ plant_train.describe()
 ```
 <br/>
 <br/>
-| Default|       fiberID |      psfMag_u |      psfMag_g |      psfMag_r |      psfMag_i |      psfMag_z |    fiberMag_u |     fiberMag_g |    fiberMag_r |    fiberMag_i |  ... |    petroMag_u |    petroMag_g |    petroMag_r |    petroMag_i |    petroMag_z |    modelMag_u |    modelMag_g |    modelMag_r |    modelMag_i | modelMag_z    |
+| Default |       fiberID |      psfMag_u |      psfMag_g |      psfMag_r |      psfMag_i |      psfMag_z |    fiberMag_u |     fiberMag_g |    fiberMag_r |    fiberMag_i |  ... |    petroMag_u |    petroMag_g |    petroMag_r |    petroMag_i |    petroMag_z |    modelMag_u |    modelMag_g |    modelMag_r |    modelMag_i | modelMag_z    |
 | :---- | ------------: | ------------: | ------------: | ------------: | ------------: | ------------: | ------------: | -------------: | ------------: | ------------: | ---: | ------------: | ------------: | ------------: | ------------: | ------------: | ------------: | ------------: | ------------: | ------------: | ------------- |
 | count | 199991.000000 |  1.999910e+05 | 199991.000000 | 199991.000000 | 199991.000000 | 199991.000000 |  1.999910e+05 |  199991.000000 | 199991.000000 | 199991.000000 |  ... | 199991.000000 | 199991.000000 | 199991.000000 | 199991.000000 | 199991.000000 | 199991.000000 | 199991.000000 | 199991.000000 | 199991.000000 | 199991.000000 |
 | mean  |    360.830152 | -6.750146e+00 |     18.675373 |     18.401235 |     18.043495 |     17.663526 |  1.084986e+01 |      19.072693 |     19.134483 |     18.183331 |  ... |     21.837903 |     18.454136 |     18.481525 |     17.686617 |     17.699207 |     20.110991 |     18.544375 |     18.181544 |     17.692395 | 17.189281     |
