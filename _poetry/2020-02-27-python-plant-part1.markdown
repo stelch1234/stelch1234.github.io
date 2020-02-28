@@ -16,6 +16,7 @@ https://www.dacon.io/competitions/official/235573
 <br/>
 | PART | 내용 |
 | ----- | :-----------------: |
+
 | PART1 | 1) Prepare Problem<br/>1.1) load libraries<br/> 1.2) load and explore the shape of the dataset <br/><br/>  2) Summarize Data<br/>2.1) Descriptive statistics<br/>2.2) Visualization |
 | PART2 | 3) Prepare Data<br/>3.1) Cleaning<br/>3.2) split out train/test dataset <br/><br/>  4) Evaluate Algorithms<br/>4.1) Algorithms                   |
 | PART3 | 5) Improve Accuracy<br/>5.1) Grid Search <br/><br/>  6) Performance of the best algorithms <br/>6.1) check the performance<br/>6.2) futher process |

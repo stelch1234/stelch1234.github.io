@@ -12,7 +12,7 @@ github_username:  stelch1234
 google_analytics_id: UA-158965523-1    
 
 # Build settings
-# markdown: kramdown
+markdown: kramdown
 
 highlighter: rouge
 
