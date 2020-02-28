@@ -11,17 +11,16 @@ comments: true
 천체 데이터는 아래 링크에서 확인할 수 있으니 참고하도록 하자.  
 https://www.dacon.io/competitions/official/235573
 <br/>
+<br/>
 분석의 전체적인 흐름은 다음과 같이 3개의 PART로 정리할 예정이다. 
 <br/>
-<br/>
 
-|  PART  |  내용  |
-| --------- | --------- |
-| PART1 | 1) Prepare Problem<br/>1.1) load libraries<br/> 1.2) load and explore the shape of the dataset <br/><br/>  2) Summarize Data<br/>2.1) Descriptive statistics<br/>2.2) Visualization |
-| PART2 | 3) Prepare Data<br/>3.1) Cleaning<br/>3.2) split out train/test dataset <br/><br/>  4) Evaluate Algorithms<br/>4.1) Algorithms                   |
-| PART3 | 5) Improve Accuracy<br/>5.1) Grid Search <br/><br/>  6) Performance of the best algorithms <br/>6.1) check the performance<br/>6.2) futher process |
+|  PART  | 내용  |
+| ---- | ---- |
+| PART1 | 1) Prepare Problem<br/>1.1) load libraries<br/>1.2) load and explore the shape of the dataset <br/>2) Summarize Data<br/>2.1) Descriptive statistics<br/>2.2) Visualization |
+| PART2 | 3) Prepare Data<br/>3.1) Cleaning<br/>3.2) split out train/test dataset <br/>4) Evaluate Algorithms<br/>4.1) Algorithms                   |
+| PART3 | 5) Improve Accuracy<br/>5.1) Grid Search <br/>6) Performance of the best algorithms <br/>6.1) check the performance<br/>6.2) futher process |
 
-<br/>
 <br/>
 <br/>
 # PART1: 1) Prepare Problem
@@ -97,7 +96,6 @@ train 데이터를 불러와 구성을 살펴보면 대략 20만개의 데이터
 <br/>
 <br/>
 # 2) Summarize Data
-<br/>
 
 ```python
 #2.1) Descriptive statistics
@@ -108,7 +106,6 @@ plant_train.describe()
 #fiberid -> categorical value 
 #psfMag_u의 mean: -6.750146e+00
 ```
-<br/>
 
 
 | Default|       fiberID |      psfMag_u |      psfMag_g |      psfMag_r |      psfMag_i |      psfMag_z |    fiberMag_u |     fiberMag_g |    fiberMag_r |    fiberMag_i |  ... |    petroMag_u |    petroMag_g |    petroMag_r |    petroMag_i |    petroMag_z |    modelMag_u |    modelMag_g |    modelMag_r |    modelMag_i | modelMag_z    |
@@ -125,7 +122,6 @@ plant_train.describe()
 
 <br/>
 fiberID, psfMag_u의 mean값을 보면 다른 feature들과 조금은 다른 것을 확인할 수 있다. fiberID는 int이기 때문에 편의상 제거를 해보고, psfMag_u는 scaling을 통해 값을 조정할 수 있지만, 다른 feature들의 mean는 대부분 동일하기 때문에 이 변수를 어떻게 처리해야 할지는 좀 더 두고 보겠다. 
-<br/>
 <br/>
 
 ```python
@@ -155,7 +151,6 @@ STAR_PN                   13
 Name: type, dtype: int64
 ```
 
-<br/>
 type 변수의 값들을 보면 천체의 종류가 나와있고 조금은 unbalance 된 값을 볼 수 있다. 또한 type은 object이기 때문에 이를 문자가 아닌 숫자로 변환하는 작업을 데이터 전처리 과정에서 처리해보자.  
 <br/>
 <br/>
@@ -170,7 +165,6 @@ sns.heatmap(data=corr,annot=True)
 plt.show()
 ```
 
-<br/>
 <center><img src="https://github.com/stelch1234/stelch1234.github.io/blob/master/img/heatmap.png?raw=true" style="zoom:60%;"/></center>
 <br/>
 features 간의 상관관계를 보게되면 특이 한 점을 볼 수 있다. psfMag_u와 fiberMag_u의 상관관계가 1인 점이다. 이전에서 부터 psfMag_u는 값의 범위가 다른 features과 달랐고 상관관계 또한 다른 변수와 높은 것으로 확인됐기 때문에 이 변수는 다음 PART2의 전처리 단계에서 제거해보도록 하겠다. 

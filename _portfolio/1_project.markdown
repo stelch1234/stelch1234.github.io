@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Project
-description: 행성 분류
+title: 천체 유형 분류
+description: ML을 활용한 Dacon 천체 분류
 img: /img/planet1.jpg
 ---
 
