@@ -55,8 +55,10 @@ from sklearn.metrics import log_loss
 ```python
 # train 데이터 불러오기 
 plant_train = pd.read_csv('plant_train.csv')
+
 # test 데이터 불러오기 
 plant_test = pd.read_csv('plant_test.csv')
+
 # train 데이터 정보보기 
 plant_train.info()
 ```
@@ -100,11 +102,8 @@ train 데이터를 불러와 구성을 살펴보면 대략 20만개의 데이터
 ```python
 #2.1) Descriptive statistics
 
+# train 데이터 기술통계량
 plant_train.describe()
-
-#type -> target value
-#fiberid -> categorical value 
-#psfMag_u의 mean: -6.750146e+00
 ```
 
 
@@ -123,8 +122,10 @@ plant_train.describe()
 <br/>
 fiberID, psfMag_u의 mean값을 보면 다른 feature들과 조금은 다른 것을 확인할 수 있다. fiberID는 int이기 때문에 편의상 제거를 해보고, psfMag_u는 scaling을 통해 값을 조정할 수 있지만, 다른 feature들의 mean는 대부분 동일하기 때문에 이 변수를 어떻게 처리해야 할지는 좀 더 두고 보겠다. 
 <br/>
+<br/>
 
 ```python
+# target 값 구성
 plant_train.type.value_counts()
 ```
 
@@ -156,12 +157,14 @@ type 변수의 값들을 보면 천체의 종류가 나와있고 조금은 unbal
 <br/>
 
 ```python
+# 변수 list 추출 
 features = plant_train.drop(['type','fiberID'], axis=1)
 features = features.columns.tolist()
 
+# 변수들간의 상관관계
 corr = plant_train[features].corr(method='pearson')
-plt.figure(figsize=(20,20))
-sns.heatmap(data=corr,annot=True)
+plt.figure(figsize=(20,20)) # 사이즈 조정 
+sns.heatmap(data=corr,annot=True) # 히트맵을 통해 시각화 
 plt.show()
 ```
 

@@ -27,6 +27,6 @@ collections:
     permalink: /project/:path/
   poetry:
     output: true
-    permalink: /python/:path/
+    permalink: /poetry/:path/
 
 
