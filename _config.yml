@@ -7,7 +7,7 @@ email: stelch@naver.com
 description: > # this means to ignore newlines until "baseurl:"
   마케팅 전공자의 데이터 분석 경험
 baseurl:  # the subpath of your site, e.g. /blog/
-url: https://stelch1234.github.io/ # the base hostname & protocol for your site
+url: https://stelch1234.github.io # the base hostname & protocol for your site
 github_username:  stelch1234
 google_analytics_id: UA-158965523-1    
 
