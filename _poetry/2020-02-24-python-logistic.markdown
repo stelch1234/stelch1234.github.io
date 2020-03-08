@@ -4,9 +4,6 @@ title: 로지스틱회귀 (logistic regression)
 tags: [Python, 로지스틱]
 description: 로지스틱회귀분석
 comments: true
-sitemap :
-  changefreq : daily
-  priority : 1.0
 ---
 
 # 로지스틱 회귀 (Logistic Regression) 란?
