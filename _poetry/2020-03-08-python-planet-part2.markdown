@@ -7,8 +7,7 @@ comments: true
 ---
 <br/>
 
-## PART2: 3) Prepare Data
-
+# PART2: 3) Prepare Data
 <br/>
 
 ```python
@@ -79,7 +78,6 @@ print(plant_train.shape)
 ```
 
 5개의 features에서 이상치가 존재하는 356개의 관측치를 제거하면 총 199,635 관측치가 남게 되는 것을 확인할 수 있다. 
-
 <br/>
 <br/>
 
@@ -119,6 +117,8 @@ Name: type, dtype: int64
 앞서 part1에서 psfMag_u는 전체 평균값이 다른 features과 상이하게 다르고 상관관계에서 다른 feature와 1인 아주 높은 상관성을 보였기 때문에 계산의 편의상 해당 칼럼을 삭제 했다. 
 
 type변수가 object이기 떄문에 추후 모델링을 위해 이를 int로 변환해주었다. 
+<br/>
+<br/>
 
 
 ```python
@@ -141,10 +141,12 @@ Training Labels Shape: (139993,)
 Testing Features Shape: (59998, 19)
 Testing Labels Shape: (59998,)
 ```
+train_test_split()을 활용해 train set과 test set을 분리해주었다.
 <br/>
 <br/>
 
-## 4) Evaluate Algorithms
+# 4) Evaluate Algorithms
+<br/>
 
 ```python
 #4.1) Algorithms
@@ -163,6 +165,8 @@ print('기본 randomforest logloss 값:', random_df_pred_log)
 ```
 
 기본설정으로 랜덤포레스트를 활용해 classificaiton한 결과를 보면 logloss값이 1.3인 것으로 나타났다. logloss는 낮을 수록 좋다. 
+<br/>
+<br/>
 
 ```python
 # Bagging+DecisionTree
