@@ -8,6 +8,7 @@ comments: true
 
 # 컨볼루션 신경망(CNN) 이란? 
 ----
+<br/>
 컨볼루션 신경망은 딥러닝 알고리즘 중에서 가장 많이 사용되는 알고리즘이다. 주로 사용은 이미지, 비디오, 텍스트, 사운드, 얼굴 인식 등.. 다양한 영역에서 특징 추출 또는 분류를 위해 사용되고 있다. 
 
 <br/>
@@ -22,10 +23,13 @@ comments: true
 
 
 위에서 볼 수 있는 것처럼 각각의 입력 데이터가 필터(커널)을 통해 컨볼루션 층을 통과하게 되면서 특징을 추출하고 최종적으로 Softmax 함수를 통해 특징을 0~1사이의 값으로 분류하는 과정을 거치게 된다. 
+
 <br/>
 <br/>
+
 # 컨볼루션 신경망 (CNN) 용어 설명
 ----
+<br/>
 **Convolution(합성곱)** 
 
 [![img](https://postfiles.pstatic.net/MjAxOTAzMjVfNDUg/MDAxNTUzNTAwMjkwNzgz.FqV4lLP3zXSVWpdMXu2U5eFcLFdnN_NhSdFqf9NzZnsg.sXJAFgFIzR5KS1TAHLLSSMZEjhghYmqfpoDFsoZAYKcg.GIF.stelch/Convolution_schematic.gif?type=w966)](https://blog.naver.com/PostView.nhn?blogId=stelch&logNo=221497552593&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=4&postListTopCurrentPage=&from=section&userTopListOpen=true&userTopListCount=5&userTopListManageOpen=false&userTopListCurrentPage=4#)
@@ -94,7 +98,6 @@ model.add(MaxPooling2D(pool_size= 2))
 #pool_size : 풀링 창의 크기를 말하며 2는 전체 크기가 절반으로 줄어든다.
 ```
 
-
 <br/>
 
 **Fully Connected Layers(=FC)** 
@@ -129,18 +132,22 @@ model.add(Dropout(0.25))
 
 # 컨볼루션 신경망 (CNN) 활용 코드
 ----
-```python
-#모델 프레임 설정
-model = Sequential()
-model.add(Dense(50, input_dim=200, activation='relu')) #입력값 200개, 은닉층 50개
-model.add(Dense(5, activation='softmax')) # 클래스 5개로 출력
+<br/>
 
-#모델 실행 환경 설정
+```python
+# 모델 프레임 설정
+model = Sequential()
+# 입력값 200개, 은닉층 50개
+model.add(Dense(50, input_dim=200, activation='relu')) 
+# 클래스 5개로 출력
+model.add(Dense(5, activation='softmax')) 
+
+# 모델 실행 환경 설정
 model.compile(loss='categorcial_crossentropy',
 			  optimizer='adam',
 			  metrics=['accuracy'])
 
-#모델 실행
-history = model.fit(X_train, Y_trian, valiation_data=(X_test, Y_test), epoch=20, batch_size=100, verbose=0) #샘플 
-100개로 모두 20번 실행
+# 모델 실행
+# 샘플 100개로 모두 20번 실행
+history = model.fit(X_train, Y_trian, valiation_data=(X_test, Y_test), epoch=20, batch_size=100, verbose=0) 
 ```
